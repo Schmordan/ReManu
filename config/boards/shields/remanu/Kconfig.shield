@@ -1,0 +1,5 @@
+config SHIELD_REMANU_LEFT
+    def_bool $(shields_list_contains,remanu_left)
+
+config SHIELD_REMANU_RIGHT
+    def_bool $(shields_list_contains,remanu_right)
