@@ -2,9 +2,6 @@
 #include "remanu-layouts.dtsi"
 
 / {
-    zephyr_udc0: &usbd {
-    status = "okay";
-    };
     left_encoder: left_encoder {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
