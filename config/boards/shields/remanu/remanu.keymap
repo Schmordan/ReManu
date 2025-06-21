@@ -5,11 +5,18 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+     behaviors {
+        encoder: encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp A>, <&kp B>;
+        };
+    };
     keymap {
         compatible =  "zmk,keymap" ;
         
         default_layer {
-            sensor-bindings = <&inc_dec_kp A B>;
+            sensor-bindings = <&encoder>;
 // --------------------------------------------------------------------------------------------------------------------------------
 // | ESC   |  1  |  2  |   3   |  4  |  5  |                   ---                |  6    |  7    |  8    |  9   | 0  |    EQUAL   |
 // | TAB   |  Q  |  W  |   E   |  R  |  T  |   (   |           ---        |  )    |  Y    |  U    |  I    |  O   | P  |     -     |
